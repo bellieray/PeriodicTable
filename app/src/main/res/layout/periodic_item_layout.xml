@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.example.periodictable.model.ElementsModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="#FF0000"
+        app:background="@{context.getColor(model.backGroundColor)}">
+        <TextView
+            android:id="@+id/protonNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@{model.protonNumber}"
+            android:textColor="@{context.getColor(model.textColor)}"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="55" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/protonNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.447">
+
+
+            <TextView
+                android:id="@+id/elementSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/anton_regular"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="@{model.elementSymbol}"
+                android:textColor="@{context.getColor(model.textColor)}"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/atomMass"
+                app:layout_constraintStart_toStartOf="@+id/atomMass"
+                app:layout_constraintTop_toBottomOf="@+id/elementName"
+                tools:text="Cl" />
+            <TextView
+                android:id="@+id/elementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvoregular"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="bottom|center_horizontal"
+                android:text="@{model.elementName}"
+                app:textColor="@{context.getColor(model.textColor)}"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Clor" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

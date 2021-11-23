@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="389dp"
+            android:layout_gravity="center"
+            android:background="#B52929"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/customProtonNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:fontFamily="@font/anton_regular"
+                android:textColor="#FBFBFB"
+                android:textSize="25sp"
+                tools:text="35" />
+
+            <ImageView
+                android:id="@+id/customImage"
+                android:layout_width="180dp"
+                android:layout_height="122dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/biological" />
+
+            <TextView
+                android:id="@+id/customElementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/monoton"
+                android:textAlignment="center"
+                android:textColor="#F6F6F6"
+                android:textSize="25sp"
+                tools:text="Sodium" />
+
+            <TextView
+                android:id="@+id/customElementSymbol"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/anton_regular"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:letterSpacing="0.2"
+                tools:text="Na" />
+
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/customButton"
+                android:layout_width="374dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/rhodiumlibreregular"
+                android:text="DISMISS"
+                android:textAlignment="center"
+                android:textColor="#CB1919"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
