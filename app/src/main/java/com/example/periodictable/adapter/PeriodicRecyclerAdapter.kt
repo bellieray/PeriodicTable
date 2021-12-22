@@ -48,6 +48,7 @@ class PeriodicRecyclerAdapter(val callback:((model:ElementsModel)->Unit)) : List
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val model = getItem(position)
+
         if(model != null){
             when(holder){
                 is EmptyViewHolder -> {}

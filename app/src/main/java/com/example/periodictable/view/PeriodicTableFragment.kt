@@ -32,7 +32,7 @@ class PeriodicTableFragment : Fragment() {
         return binding.root
     }
 
-    private fun showDialog(model: ElementsModel) {
+  private fun showDialog(model: ElementsModel) {
         // Toast.makeText(requireContext(),"Item clicked ${model.elementName}",Toast.LENGTH_SHORT).show()
         val builder = AlertDialog.Builder(requireContext())
         val mBinding = CustomDialogBinding.inflate(LayoutInflater.from(requireContext()), null, false)
