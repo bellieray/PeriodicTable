@@ -15,7 +15,6 @@ import com.example.periodictable.R
 //└──────────────────────────┘    
 
 data class   ElementsModel(
-    val nesne : Int,
     val protonNumber : String,
     val elementName : String,
     val elementSymbol : String,
